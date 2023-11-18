@@ -1,0 +1,3 @@
+com.example.kindergarden.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

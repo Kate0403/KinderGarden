@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\37533\\.gradle\\daemon\\8.0\\com.example.kindergarden.app-mergeDebugResources-40:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\37533\\.gradle\\daemon\\8.0\\com.example.kindergarden.app-main-43:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\37533\\.gradle\\daemon\\8.0\\com.example.kindergarden.app-mergeDebugResources-40:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\37533\\.gradle\\daemon\\8.0\\com.example.kindergarden.app-main-43:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\37533\\.gradle\\daemon\\8.0\\com.example.kindergarden.app-mergeDebugResources-40:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\37533\\.gradle\\daemon\\8.0\\com.example.kindergarden.app-main-43:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "com.example.kindergarden.app-mergeDebugResources-40:/layout/fragment_home.xml",
+        "source": "com.example.kindergarden.app-main-43:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\37533\\.gradle\\daemon\\8.0\\com.example.kindergarden.app-mergeDebugResources-40:\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\37533\\.gradle\\daemon\\8.0\\com.example.kindergarden.app-main-43:\\layout\\fragment_notifications.xml"
+    }
+]

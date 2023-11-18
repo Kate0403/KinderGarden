@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">16608102898</string>
+    <string name="google_api_key" translatable="false">AIzaSyDGMLeyXCblQKB7Tq23PViB6DHwm74WSik</string>
+    <string name="google_app_id" translatable="false">1:16608102898:android:61bc52b158b8a908efc36b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDGMLeyXCblQKB7Tq23PViB6DHwm74WSik</string>
+    <string name="google_storage_bucket" translatable="false">kindergarden-4d0d0.appspot.com</string>
+    <string name="project_id" translatable="false">kindergarden-4d0d0</string>
+</resources>
