@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,16 +26,20 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final FloatingActionButton btnSend;
 
   @NonNull
+  public final ListView listOfMessages;
+
+  @NonNull
   public final EditText messageField;
 
   @NonNull
   public final TextInputLayout textLayout;
 
   private FragmentHomeBinding(@NonNull RelativeLayout rootView,
-      @NonNull FloatingActionButton btnSend, @NonNull EditText messageField,
-      @NonNull TextInputLayout textLayout) {
+      @NonNull FloatingActionButton btnSend, @NonNull ListView listOfMessages,
+      @NonNull EditText messageField, @NonNull TextInputLayout textLayout) {
     this.rootView = rootView;
     this.btnSend = btnSend;
+    this.listOfMessages = listOfMessages;
     this.messageField = messageField;
     this.textLayout = textLayout;
   }
@@ -72,6 +77,12 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.list_of_messages;
+      ListView listOfMessages = ViewBindings.findChildViewById(rootView, id);
+      if (listOfMessages == null) {
+        break missingId;
+      }
+
       id = R.id.messageField;
       EditText messageField = ViewBindings.findChildViewById(rootView, id);
       if (messageField == null) {
@@ -84,7 +95,8 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((RelativeLayout) rootView, btnSend, messageField, textLayout);
+      return new FragmentHomeBinding((RelativeLayout) rootView, btnSend, listOfMessages,
+          messageField, textLayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

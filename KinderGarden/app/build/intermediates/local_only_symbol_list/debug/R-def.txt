@@ -15,12 +15,14 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_notifications_black_24dp
 drawable ic_send_button
+id activity_main
 id btnSend
-id container
+id list_of_messages
 id messageField
+id message_text
+id message_time
+id message_user
 id mobile_navigation
-id nav_host_fragment_activity_main
-id nav_view
 id navigation_dashboard
 id navigation_home
 id navigation_notifications
@@ -31,6 +33,7 @@ layout activity_main
 layout fragment_dashboard
 layout fragment_home
 layout fragment_notifications
+layout list_item
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
