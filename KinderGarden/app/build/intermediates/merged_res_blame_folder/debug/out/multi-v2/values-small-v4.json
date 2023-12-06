@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.kindergarden.app-mergeDebugResources-48:/values-small-v4/values-small-v4.xml",
+            "outputFile": "com.example.kindergarden.app-mergeDebugResources-72:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\31a5fb2d113dfd875529a159f9748b32\\transformed\\material-1.8.0\\res\\values-small-v4\\values-small-v4.xml",

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/online_chat"
+        android:title="Чат"/>
+
+    <item
+        android:id="@+id/psyho_review"
+        android:icon="@drawable/psyho_review_"
+        android:title="Отзывы"/>
+    <item
+        android:id="@+id/homework"
+        android:icon="@drawable/homework"
+        android:title="ДЗ"/>
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/notification"
+        android:title="Уведимдения"/>
+
+</menu>

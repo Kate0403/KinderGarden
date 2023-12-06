@@ -3,6 +3,7 @@ package com.example.kindergarden;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
+import com.google.android.gms.dynamic.SupportFragmentWrapper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -23,6 +25,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.example.kindergarden.databinding.ActivityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
@@ -37,9 +40,17 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private static int SIGN_IN_CODE=1;
 
-    private FirebaseListAdapter<Message> adapter;
 
-    private FloatingActionButton sendBtn;
+
+    BottomNavigationView bottomNavigationView;
+
+    ChatFragment chatFragment = new ChatFragment();
+    ReviewFragment reviewFragment = new ReviewFragment();
+    HometasksFragment hometasksFragment = new HometasksFragment();
+    NotificationsFragment notificationsFragment = new NotificationsFragment();
+
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -47,21 +58,24 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == SIGN_IN_CODE) {
             if (resultCode == RESULT_OK) {
                 Snackbar.make(activity_main, "Вы авторизованы", Snackbar.LENGTH_LONG).show();
-                displayAllMessages();
+
             }
             else {
                 Snackbar.make(activity_main, "Вы не авторизованы", Snackbar.LENGTH_LONG).show();
-                finish();
+                startActivity(new Intent(MainActivity.this, Registration_activity.class));
             }
         }
     }
 
     private RelativeLayout activity_main;
-
+    private FloatingActionButton sendBtn;
 
   @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+/*
+
         setContentView(R.layout.activity_main);
         activity_main = findViewById(R.id.activity_main);
         sendBtn = findViewById(R.id.btnSend);
@@ -87,6 +101,40 @@ public class MainActivity extends AppCompatActivity {
             Snackbar.make(activity_main, "Вы авторизованы", Snackbar.LENGTH_LONG).show();
             displayAllMessages();
         }
+
+        */
+
+      setContentView(R.layout.activity_main);
+
+      bottomNavigationView = findViewById(R.id.bottom_nav);
+
+      getSupportFragmentManager().beginTransaction().replace(R.id.container, chatFragment).commit();
+      bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+          @Override
+          public boolean onNavigationItemSelected(MenuItem item) {
+              switch (item.getItemId()){
+                  case R.id.chat:
+                      getSupportFragmentManager().beginTransaction().replace(R.id.container, chatFragment).commit();
+                      return true;
+                  case R.id.psyho_review:
+                      getSupportFragmentManager().beginTransaction().replace(R.id.container, reviewFragment).commit();
+                      return true;
+                  case R.id.notification:
+                      getSupportFragmentManager().beginTransaction().replace(R.id.container, notificationsFragment).commit();
+                      return true;
+                  case R.id.homework:
+                      getSupportFragmentManager().beginTransaction().replace(R.id.container, hometasksFragment).commit();
+                      return true;
+
+
+              }
+              return false;
+          }
+      });
+
+
+
+
 /*
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
@@ -105,23 +153,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void displayAllMessages() {
-        ListView listOfMessages = findViewById(R.id.list_of_messages);
-        FirebaseListOptions<Message> options = new FirebaseListOptions.Builder<Message>().setQuery(FirebaseDatabase.getInstance().getReference(), Message.class).setLayout(R.layout.list_item).build();
-        adapter = new FirebaseListAdapter<Message>(options) {
-            @Override
-            protected void populateView(@NonNull View v, @NonNull Message model, int position) {
-                TextView mess_user, mess_time, mess_text;
-                mess_user = v.findViewById(R.id.message_user);
-                mess_time = v.findViewById(R.id.message_time);
-                mess_text = v.findViewById(R.id.message_text);
 
-                mess_user.setText(model.getUserName());
-                mess_text.setText(model.getTextMessage());
-                mess_time.setText(DateFormat.format("dd-mm-yyyy HH:mm:ss", model.getMessageTime()));
-            }
-        };
-        listOfMessages.setAdapter(adapter);
-    }
 
 }

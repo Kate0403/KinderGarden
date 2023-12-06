@@ -4,16 +4,14 @@ package com.example.kindergarden.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.kindergarden.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -26,27 +24,18 @@ public final class ActivityMainBinding implements ViewBinding {
   public final RelativeLayout activityMain;
 
   @NonNull
-  public final FloatingActionButton btnSend;
+  public final BottomNavigationView bottomNav;
 
   @NonNull
-  public final ListView listOfMessages;
-
-  @NonNull
-  public final EditText messageField;
-
-  @NonNull
-  public final TextInputLayout textLayout;
+  public final FrameLayout container;
 
   private ActivityMainBinding(@NonNull RelativeLayout rootView,
-      @NonNull RelativeLayout activityMain, @NonNull FloatingActionButton btnSend,
-      @NonNull ListView listOfMessages, @NonNull EditText messageField,
-      @NonNull TextInputLayout textLayout) {
+      @NonNull RelativeLayout activityMain, @NonNull BottomNavigationView bottomNav,
+      @NonNull FrameLayout container) {
     this.rootView = rootView;
     this.activityMain = activityMain;
-    this.btnSend = btnSend;
-    this.listOfMessages = listOfMessages;
-    this.messageField = messageField;
-    this.textLayout = textLayout;
+    this.bottomNav = bottomNav;
+    this.container = container;
   }
 
   @Override
@@ -78,32 +67,19 @@ public final class ActivityMainBinding implements ViewBinding {
     missingId: {
       RelativeLayout activityMain = (RelativeLayout) rootView;
 
-      id = R.id.btnSend;
-      FloatingActionButton btnSend = ViewBindings.findChildViewById(rootView, id);
-      if (btnSend == null) {
+      id = R.id.bottom_nav;
+      BottomNavigationView bottomNav = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNav == null) {
         break missingId;
       }
 
-      id = R.id.list_of_messages;
-      ListView listOfMessages = ViewBindings.findChildViewById(rootView, id);
-      if (listOfMessages == null) {
+      id = R.id.container;
+      FrameLayout container = ViewBindings.findChildViewById(rootView, id);
+      if (container == null) {
         break missingId;
       }
 
-      id = R.id.messageField;
-      EditText messageField = ViewBindings.findChildViewById(rootView, id);
-      if (messageField == null) {
-        break missingId;
-      }
-
-      id = R.id.textLayout;
-      TextInputLayout textLayout = ViewBindings.findChildViewById(rootView, id);
-      if (textLayout == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((RelativeLayout) rootView, activityMain, btnSend,
-          listOfMessages, messageField, textLayout);
+      return new ActivityMainBinding((RelativeLayout) rootView, activityMain, bottomNav, container);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
