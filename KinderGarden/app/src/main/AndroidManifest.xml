@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,33 @@
         android:theme="@style/Theme.KinderGarden"
         tools:targetApi="31">
         <activity
+            android:name=".EducationPlans.UploadEducationPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Notification.UploadNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchHomeworkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UducationPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Notification.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Homework.HomeworkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Homework.UpdateHomeworkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Homework.DetailHomeworkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Homework.UploadHomeworkActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChatActivity"
             android:exported="false" />
         <activity
@@ -23,10 +51,10 @@
             android:label="@string/title_activity_chat"
             android:theme="@style/Theme.KinderGarden" />
         <activity
-            android:name=".Registration_activity"
+            android:name=".Login_Registration.Registration_activity"
             android:exported="false" />
         <activity
-            android:name=".Login_activity"
+            android:name=".Login_Registration.Login_activity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

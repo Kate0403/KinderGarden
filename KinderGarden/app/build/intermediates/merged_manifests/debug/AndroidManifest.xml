@@ -9,6 +9,7 @@
         android:targetSdkVersion="33" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Used to check if a browser is available before launching phone auth -->
     <!-- See ui/phone/PhoneNumberVerificationHandler.isBrowserAvailable() -->
     <queries>
@@ -44,8 +45,31 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.KinderGarden" >
+        <activity
+            android:name="com.example.kindergarden.Notification.UploadNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kindergarden.SearchHomeworkActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kindergarden.UducationPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kindergarden.Notification.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kindergarden.Homework.HomeworkActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kindergarden.Homework.UpdateHomeworkActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kindergarden.Homework.DetailHomeworkActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kindergarden.Homework.UploadHomeworkActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.kindergarden.ChatActivity"
             android:exported="false" />
@@ -55,10 +79,10 @@
             android:label="@string/title_activity_chat"
             android:theme="@style/Theme.KinderGarden" />
         <activity
-            android:name="com.example.kindergarden.Registration_activity"
+            android:name="com.example.kindergarden.Login_Registration.Registration_activity"
             android:exported="false" />
         <activity
-            android:name="com.example.kindergarden.Login_activity"
+            android:name="com.example.kindergarden.Login_Registration.Login_activity"
             android:exported="false" />
         <activity
             android:name="com.example.kindergarden.MainActivity"

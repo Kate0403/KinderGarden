@@ -4,7 +4,7 @@
             "outputFile": "com.example.kindergarden.test.app-mergeDebugAndroidTestResources-3:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\0bd916cab16cc86cd45ed89cf225f612\\transformed\\jetified-core-1.5.0\\res\\values-v18\\values.xml",
+                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\94e8764dc3624fe35c1cdb630c9f179f\\transformed\\jetified-core-1.5.0\\res\\values-v18\\values.xml",
                     "from": {
                         "startLines": "4,12",
                         "startColumns": "0,0",

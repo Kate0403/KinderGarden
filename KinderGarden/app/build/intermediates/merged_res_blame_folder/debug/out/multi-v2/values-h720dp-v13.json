@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.kindergarden.app-mergeDebugResources-72:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.example.kindergarden.app-mergeDebugResources-74:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\c57edc5a7463e5e03e5e6ba8967e0a74\\transformed\\appcompat-1.5.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\c9053fc2726ff107843e67e2e67dad5b\\transformed\\appcompat-1.5.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

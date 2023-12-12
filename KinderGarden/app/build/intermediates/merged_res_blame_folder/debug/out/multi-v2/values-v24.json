@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.kindergarden.app-mergeDebugResources-72:/values-v24/values-v24.xml",
+            "outputFile": "com.example.kindergarden.app-mergeDebugResources-74:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\c57edc5a7463e5e03e5e6ba8967e0a74\\transformed\\appcompat-1.5.1\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\a8efd12f468a0acffcf8804557517628\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\8202e359f2bc069faf8ca669217909ab\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -31,7 +21,17 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\31a5fb2d113dfd875529a159f9748b32\\transformed\\material-1.8.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\c9053fc2726ff107843e67e2e67dad5b\\transformed\\appcompat-1.5.1\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\bbaf715bc2012800f1434e04e7d992a8\\transformed\\material-1.8.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.kindergarden.app-mergeDebugResources-72:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "com.example.kindergarden.app-mergeDebugResources-74:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\31a5fb2d113dfd875529a159f9748b32\\transformed\\material-1.8.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
+                    "source": "C:\\Users\\37533\\.gradle\\caches\\transforms-3\\bbaf715bc2012800f1434e04e7d992a8\\transformed\\material-1.8.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

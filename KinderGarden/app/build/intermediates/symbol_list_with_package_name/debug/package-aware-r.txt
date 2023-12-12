@@ -27,6 +27,12 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fab_scale_down
+anim fab_scale_up
+anim fab_slide_in_from_left
+anim fab_slide_in_from_right
+anim fab_slide_out_to_left
+anim fab_slide_out_to_right
 anim fragment_fast_out_extra_slow_in
 anim fui_slide_in_right
 anim fui_slide_out_left
@@ -47,6 +53,8 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim slide_in_right
+anim slide_out_left
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -533,6 +541,26 @@ attr fabCradleRoundedCornerRadius
 attr fabCradleVerticalOffset
 attr fabCustomSize
 attr fabSize
+attr fab_colorDisabled
+attr fab_colorNormal
+attr fab_colorPressed
+attr fab_colorRipple
+attr fab_elevationCompat
+attr fab_hideAnimation
+attr fab_label
+attr fab_progress
+attr fab_progress_backgroundColor
+attr fab_progress_color
+attr fab_progress_indeterminate
+attr fab_progress_max
+attr fab_progress_showBackground
+attr fab_shadowColor
+attr fab_shadowRadius
+attr fab_shadowXOffset
+attr fab_shadowYOffset
+attr fab_showAnimation
+attr fab_showShadow
+attr fab_size
 attr fastScrollEnabled
 attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
@@ -645,6 +673,7 @@ attr indicatorInset
 attr indicatorSize
 attr initialActivityCount
 attr insetForeground
+attr isDarkTheme
 attr isLightTheme
 attr isMaterial3DynamicColorApplied
 attr isMaterial3Theme
@@ -849,6 +878,45 @@ attr measureWithLargestChild
 attr menu
 attr menuAlignmentMode
 attr menuGravity
+attr menu_animationDelayPerItem
+attr menu_backgroundColor
+attr menu_buttonSpacing
+attr menu_buttonToggleAnimation
+attr menu_colorNormal
+attr menu_colorPressed
+attr menu_colorRipple
+attr menu_fab_hide_animation
+attr menu_fab_label
+attr menu_fab_show_animation
+attr menu_fab_size
+attr menu_icon
+attr menu_labels_colorNormal
+attr menu_labels_colorPressed
+attr menu_labels_colorRipple
+attr menu_labels_cornerRadius
+attr menu_labels_customFont
+attr menu_labels_ellipsize
+attr menu_labels_hideAnimation
+attr menu_labels_margin
+attr menu_labels_maxLines
+attr menu_labels_padding
+attr menu_labels_paddingBottom
+attr menu_labels_paddingLeft
+attr menu_labels_paddingRight
+attr menu_labels_paddingTop
+attr menu_labels_position
+attr menu_labels_showAnimation
+attr menu_labels_showShadow
+attr menu_labels_singleLine
+attr menu_labels_style
+attr menu_labels_textColor
+attr menu_labels_textSize
+attr menu_openDirection
+attr menu_shadowColor
+attr menu_shadowRadius
+attr menu_shadowXOffset
+attr menu_shadowYOffset
+attr menu_showShadow
 attr methodName
 attr mimeType
 attr minHeight
@@ -1390,6 +1458,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color dark_blue
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1447,8 +1516,11 @@ color fui_bgPhone
 color fui_bgTwitter
 color fui_bgYahoo
 color fui_transparent
+color green
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color levender
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -1980,9 +2052,10 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color purple
 color purple_200
-color purple_500
 color purple_700
+color red
 color ripple_material_dark
 color ripple_material_light
 color secondary_text_default_material_dark
@@ -1997,6 +2070,7 @@ color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
 color teal_200
 color teal_700
+color text_color_dark
 color tooltip_background_dark
 color tooltip_background_light
 color vector_tint_color
@@ -2150,6 +2224,8 @@ dimen design_tab_text_size_2line
 dimen design_textinput_caption_translate_y
 dimen disabled_alpha_material_dark
 dimen disabled_alpha_material_light
+dimen fab_size_mini
+dimen fab_size_normal
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
@@ -2175,6 +2251,7 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen labels_text_size
 dimen m3_alert_dialog_action_bottom_padding
 dimen m3_alert_dialog_action_top_padding
 dimen m3_alert_dialog_corner_size
@@ -2810,10 +2887,22 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable baseline_add_24
+drawable baseline_close_24
+drawable baseline_search_24
+drawable bottom_background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
 drawable btn_checkbox_unchecked_to_checked_mtrl_animation
+drawable btn_google_signin_dark_disabled
+drawable btn_google_signin_dark_focus
+drawable btn_google_signin_dark_normal
+drawable btn_google_signin_dark_pressed
+drawable btn_google_signin_light_disabled
+drawable btn_google_signin_light_focus
+drawable btn_google_signin_light_normal
+drawable btn_google_signin_light_pressed
 drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
@@ -2837,11 +2926,15 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable custom_edittext
+drawable dark_theme_google_icon_selector
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edu_plan
+drawable fab_add
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
 drawable fui_ic_check_circle_black_128dp
@@ -2857,6 +2950,11 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable homework
 drawable ic_arrow_back_black_24
+drawable ic_baseline_delete_24
+drawable ic_baseline_edit_24
+drawable ic_baseline_format_list_bulleted_24
+drawable ic_baseline_lock_24
+drawable ic_baseline_person_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
@@ -2874,6 +2972,10 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable ic_search_black_24
 drawable ic_send_button
+drawable item_selector
+drawable lavender_border
+drawable lavender_round
+drawable light_theme_google_icon_selector
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -2947,16 +3049,18 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable online_chat
+drawable pagebkg
 drawable psyho_review_
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable uploading
+drawable white_box
 font ubuntu_bold
 id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id Email_title
 id FUNCTION
 id META
 id NO_DEBUG
@@ -3023,9 +3127,7 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_text
 id actions
-id activity_chat
 id activity_chooser_view_content
-id activity_main
 id add
 id adjust_height
 id adjust_width
@@ -3054,7 +3156,11 @@ id beginning
 id bestChoice
 id blocking
 id bottom
-id bottom_nav
+id bottomNavigation
+id bottom_chat
+id bottom_edu_plan
+id bottom_homework
+id bottom_notification
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3064,6 +3170,8 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnCancel
+id btnReset
 id btnSend
 id btn_holder
 id buttonPanel
@@ -3086,11 +3194,8 @@ id center_vertical
 id chain
 id chain2
 id chains
-id chat
 id checkbox
 id checked
-id child_number_field
-id child_number_title
 id chronometer
 id circle_center
 id clear_text
@@ -3129,13 +3234,21 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteButton
 id deltaRelative
 id dependency_ordering
+id desc
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detailChildName
+id detailDesc
+id detailImage
+id detailTitle
+id dialogBox
+id dialogForgot
 id dialog_button
 id dimensions
 id direct
@@ -3144,6 +3257,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id down
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3157,16 +3271,15 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editButton
 id edit_phone_number
 id edit_query
 id elastic
 id email
+id emailBox
 id email_button
-id email_field
-id email_field_r
 id email_footer_tos_and_pp_text
 id email_layout
-id email_title
 id email_tos_and_pp_text
 id embed
 id end
@@ -3177,6 +3290,8 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fab
+id fab_label
 id fade
 id fill
 id fill_horizontal
@@ -3191,6 +3306,7 @@ id fixed
 id flip
 id floating
 id forever
+id forgotTitle
 id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
@@ -3203,8 +3319,6 @@ id gone
 id graph
 id graph_wrap
 id group_divider
-id group_numb_field
-id group_title
 id grouping
 id groups
 id header
@@ -3215,7 +3329,6 @@ id hide_in_inspector_tag
 id hideable
 id home
 id homeAsUp
-id homework
 id honorRequest
 id horizontal_only
 id icon
@@ -3251,12 +3364,14 @@ id listMode
 id list_item
 id list_of_messages
 id locale
+id loginRedirectText
 id login_button
-id login_hint
-id login_title
+id login_password
+id login_username
 id logo
 id ltr
 id m3_side_sheet
+id main_activity
 id main_tos_and_pp
 id marquee
 id masked
@@ -3324,9 +3439,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id name
-id name_filed
 id name_layout
-id name_title
 id nav_controller_view_tag
 id nav_host_fragment_container
 id navigation_bar_item_active_indicator_view
@@ -3347,7 +3460,6 @@ id noState
 id none
 id normal
 id north
-id notification
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -3364,11 +3476,7 @@ id parentPanel
 id parentRelative
 id parent_matrix
 id password
-id password_field
-id password_field_r
 id password_layout
-id password_title
-id password_title_r
 id password_toggle
 id path
 id pathRelative
@@ -3384,13 +3492,28 @@ id postLayout
 id pressed
 id progress_circular
 id progress_horizontal
-id psyho_review
 id radio
 id ratio
+id recCard
+id recCardNotif
+id recChildName
+id recDateNotif
+id recDesc
+id recDescNotif
+id recImage
+id recPriority
+id recPriorityNotif
+id recTitle
+id recTitleNotif
 id rectangles
-id registration_button
-id registration_title
+id recyclerView
 id report_drawn
+id resActivitiesEdu
+id resCardEdu
+id resDescEdu
+id resPeriodEdu
+id resTeacherEdu
+id resTitleEdu
 id resend_barrier
 id resend_code
 id reverseSawtooth
@@ -3402,6 +3525,8 @@ id root
 id rounded
 id row_index_key
 id rtl
+id saveButton
+id saveButtonNotif
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3412,6 +3537,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id search
 id search_badge
 id search_bar
 id search_bar_text_view
@@ -3448,6 +3574,11 @@ id showCustom
 id showHome
 id showTitle
 id sign_in_email_sent_text
+id signupRedirectText
+id signup_button
+id signup_email
+id signup_name
+id signup_password
 id sin
 id skipCollapsed
 id skipped
@@ -3500,16 +3631,14 @@ id tag_window_insets_animation_callback
 id text
 id text2
 id textEnd
-id textLayout
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id text_dashboard
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
-id text_notifications
+id text_layout
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -3521,7 +3650,6 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
-id to_login_page_button
 id toggle
 id top
 id topPanel
@@ -3541,6 +3669,18 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id upChildName
+id updateButton
+id updateChildName
+id updateDesc
+id updateImage
+id updateTitle
+id uploadDateNotif
+id uploadDesc
+id uploadDescNotif
+id uploadImage
+id uploadTitleNotif
+id uploadTopic
 id useLogo
 id vertical_only
 id view_offset_helper
@@ -3675,10 +3815,17 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_chat
+layout activity_education_plan
+layout activity_homework
+layout activity_homework_detail
 layout activity_login
 layout activity_main
+layout activity_notification
 layout activity_registration
+layout activity_search_homework
+layout activity_update_homework
+layout activity_upload_homework
+layout activity_upload_notification
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -3697,13 +3844,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_chat
-layout fragment_dashboard
-layout fragment_home
-layout fragment_hometasks
-layout fragment_notifications
-layout fragment_notifications_main
-layout fragment_review
+layout dialog_forgot
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone
@@ -3797,11 +3938,14 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout progress_layout
+layout recycler_item_education_plan
+layout recycler_item_homework
+layout recycler_item_notification
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-menu bottom_menu_parrent
 menu bottom_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -3985,6 +4129,8 @@ string gcm_defaultSenderId
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
+string google_sign_in
+string google_sign_up
 string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
@@ -5298,6 +5444,7 @@ styleable BottomAppBar addElevationShadow backgroundTint elevation fabAlignmentM
 styleable BottomNavigationView android_minHeight compatShadowEnabled itemHorizontalTranslationEnabled
 styleable BottomSheetBehavior_Layout android_maxWidth android_maxHeight android_elevation backgroundTint behavior_draggable behavior_expandedOffset behavior_fitToContents behavior_halfExpandedRatio behavior_hideable behavior_peekHeight behavior_saveFlags behavior_significantVelocityThreshold behavior_skipCollapsed gestureInsetBottomIgnored marginLeftSystemWindowInsets marginRightSystemWindowInsets marginTopSystemWindowInsets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets paddingTopSystemWindowInsets shapeAppearance shapeAppearanceOverlay shouldRemoveExpandedCorners
 styleable ButtonBarLayout allowStacking
+styleable ButtonStyleable android_text isDarkTheme
 styleable Capability queryPatterns shortcutMatchRequired
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Carousel carousel_backwardTransition carousel_emptyViewsBehavior carousel_firstView carousel_forwardTransition carousel_infinite carousel_nextState carousel_previousState carousel_touchUpMode carousel_touchUp_dampeningFactor carousel_touchUp_velocityThreshold
@@ -5325,8 +5472,9 @@ styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color dra
 styleable DrawerLayout elevation
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec extendStrategy hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
-styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
+styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize fab_colorDisabled fab_colorNormal fab_colorPressed fab_colorRipple fab_elevationCompat fab_hideAnimation fab_label fab_progress fab_progress_backgroundColor fab_progress_color fab_progress_indeterminate fab_progress_max fab_progress_showBackground fab_shadowColor fab_shadowRadius fab_shadowXOffset fab_shadowYOffset fab_showAnimation fab_showShadow fab_size hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
+styleable FloatingActionMenu menu_animationDelayPerItem menu_backgroundColor menu_buttonSpacing menu_buttonToggleAnimation menu_colorNormal menu_colorPressed menu_colorRipple menu_fab_hide_animation menu_fab_label menu_fab_show_animation menu_fab_size menu_icon menu_labels_colorNormal menu_labels_colorPressed menu_labels_colorRipple menu_labels_cornerRadius menu_labels_customFont menu_labels_ellipsize menu_labels_hideAnimation menu_labels_margin menu_labels_maxLines menu_labels_padding menu_labels_paddingBottom menu_labels_paddingLeft menu_labels_paddingRight menu_labels_paddingTop menu_labels_position menu_labels_showAnimation menu_labels_showShadow menu_labels_singleLine menu_labels_style menu_labels_textColor menu_labels_textSize menu_openDirection menu_shadowColor menu_shadowRadius menu_shadowXOffset menu_shadowYOffset menu_showShadow
 styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex

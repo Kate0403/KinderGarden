@@ -1,5 +1,5 @@
-com.example.kindergarden.test.app-jetified-core-1.5.0-0 C:\Users\37533\.gradle\caches\transforms-3\0bd916cab16cc86cd45ed89cf225f612\transformed\jetified-core-1.5.0\res
-com.example.kindergarden.test.app-jetified-annotation-experimental-1.3.0-1 C:\Users\37533\.gradle\caches\transforms-3\85760b98c416d8d942d23dd1a132cf85\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.kindergarden.test.app-jetified-annotation-experimental-1.3.0-0 C:\Users\37533\.gradle\caches\transforms-3\5cdca6239584eed83d1cf3ba4a774717\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.kindergarden.test.app-jetified-core-1.5.0-1 C:\Users\37533\.gradle\caches\transforms-3\94e8764dc3624fe35c1cdb630c9f179f\transformed\jetified-core-1.5.0\res
 com.example.kindergarden.test.app-androidTest-2 C:\Users\37533\AndroidStudioProjects\KinderGarden\app\build\generated\res\resValues\androidTest\debug
 com.example.kindergarden.test.app-mergeDebugAndroidTestResources-3 C:\Users\37533\AndroidStudioProjects\KinderGarden\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
 com.example.kindergarden.test.app-mergeDebugAndroidTestResources-4 C:\Users\37533\AndroidStudioProjects\KinderGarden\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
